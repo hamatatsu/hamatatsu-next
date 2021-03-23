@@ -16,13 +16,15 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Cache dependencies
+    - name: Cache node
       uses: actions/cache@v2
       with:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+    
+    - name: Cache nextjs
       uses: actions/cache@v2
       with:
         path: ${{ github.workspace }}/.next/cache
