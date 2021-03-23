@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .main {
   padding: 5rem 0;
   flex: 1;
@@ -15,30 +14,26 @@
   justify-content: center;
   align-items: center;
 }
-
 .title {
-  margin: 0;
+  margin: 1rem;
   line-height: 1.15;
   font-size: 4rem;
 }
-
 .title,
 .description {
   text-align: center;
 }
-
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
 }
-
 .profileImg {
-  
-  border-radius: 9999px;
+  border-radius: 50%;
 }
-
-.linkGithub {
-  line-height: 1;
-  font-size: 1rem;
-  text-decoration: underline;
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+}
+.socialLinks > a > * {
+  font-size: 2rem;
 }

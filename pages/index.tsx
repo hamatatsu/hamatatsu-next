@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import {Twitter, GitHub} from '@material-ui/icons';
 
 export default function Home() {
   return (
@@ -21,12 +22,17 @@ export default function Home() {
           Welcome to my page
         </h1>
 
+        <div className={styles.socialLinks}>
+          <a href="https://twitter.com/hamatatsu0">
+            <Twitter />
+          </a>
+          <a href="https://github.com/hamatatsu">
+            <GitHub />
+          </a>
+        </div>
+
         <p className={styles.description}>
           Undergoing construction😉
-        </p>
-
-        <p className={styles.linkGithub}>
-          <a href="https://github.com/hamatatsu">Go to GitHub</a>
         </p>
       </main>
     </div>
