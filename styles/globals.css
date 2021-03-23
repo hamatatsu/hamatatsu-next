@@ -1,6 +1,12 @@
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
 
 a {
