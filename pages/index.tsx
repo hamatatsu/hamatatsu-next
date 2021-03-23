@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <img
-          className={styles.borderCircle}
+          className={styles.profileImg}
           src="/profile.png"
           alt="profile icon"
           width={128}
@@ -25,7 +25,7 @@ export default function Home() {
           Undergoing construction😉
         </p>
 
-        <p className={styles.link2github}>
+        <p className={styles.linkGithub}>
           <a href="https://github.com/hamatatsu">Go to GitHub</a>
         </p>
       </main>
