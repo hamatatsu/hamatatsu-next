@@ -6,13 +6,14 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>hamatatsu&apos;s page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="The home page of hamatatsu's page." />
       </Head>
 
       <main className={styles.main}>
         <img
           className={styles.borderCircle}
           src="/profile.png"
+          alt="profile icon"
           width={128}
           height={128}
         />
