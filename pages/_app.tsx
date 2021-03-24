@@ -1,17 +1,48 @@
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
-import {ThemeProvider} from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../styles/theme';
-import React from 'react';
+import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import {jaJP} from '@material-ui/core/locale';
+import {CssBaseline, useMediaQuery} from '@material-ui/core';
+import {useEffect, useState, useMemo} from 'react';
+import DarkThemeSwitch from '../components/dark-theme-switch';
 
 export default function MyApp({Component, pageProps}: AppProps) {
-  React.useEffect(() => {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [darkState, setDarkState] = useState(prefersDarkMode);
+
+  const handleThemeToggle = () => {
+    setDarkState(!darkState);
+  };
+
+  useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
       jssStyles.parentElement?.removeChild(jssStyles);
     }
   }, []);
+
+  const theme = useMemo(
+      () =>
+        createMuiTheme({
+          palette: {
+            primary: {
+              main: '#4fc3f7',
+            },
+            secondary: {
+              main: '#ff9800',
+            },
+            type: darkState ? 'dark' : 'light',
+          },
+          typography: {
+            fontFamily: [
+              'Noto Sans JP',
+              'sans-serif',
+            ].join(','),
+          },
+        }, jaJP),
+      [darkState],
+  );
+
   return (
     <>
       <Head>
@@ -28,6 +59,7 @@ export default function MyApp({Component, pageProps}: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <DarkThemeSwitch checked={darkState} onChange={handleThemeToggle} />
         <Component {...pageProps} />
       </ThemeProvider>
     </>

@@ -1,4 +1,4 @@
-import {Container} from '@material-ui/core';
+import {Container, Grid} from '@material-ui/core';
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
 import Header from '../components/header';
 
@@ -19,7 +19,11 @@ export default function Home() {
 
   return (
     <Container className={classes.root} maxWidth="md">
-      <Header />
+      <Grid justify="center" container>
+        <Grid item>
+          <Header />
+        </Grid>
+      </Grid>
     </Container>
   );
 }
