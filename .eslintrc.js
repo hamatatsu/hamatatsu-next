@@ -23,5 +23,6 @@ module.exports = {
     'max-len': 'off',
     'require-jsdoc': 'off',
     'react/react-in-jsx-scope': 'off',
+    'quote-props': 'off',
   },
 };
