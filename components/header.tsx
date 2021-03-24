@@ -31,7 +31,7 @@ export default function Header() {
         <SocialButton />
       </Grid>
       <Grid item>
-        <Typography variant="body1">
+        <Typography variant="h6">
           Undergoing construction😉
         </Typography>
       </Grid>
