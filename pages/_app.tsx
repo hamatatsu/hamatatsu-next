@@ -1,4 +1,3 @@
-// import '../styles/globals.css';
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
 import {ThemeProvider} from '@material-ui/core/styles';
@@ -25,7 +24,7 @@ export default function MyApp({Component, pageProps}: AppProps) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content={theme.palette.primary.main} />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
