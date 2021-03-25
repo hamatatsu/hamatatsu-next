@@ -4,15 +4,10 @@ import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import {jaJP} from '@material-ui/core/locale';
 import {CssBaseline, useMediaQuery} from '@material-ui/core';
 import {useEffect, useState, useMemo} from 'react';
-import DarkThemeSwitch from '../components/dark-theme-switch';
 
 export default function MyApp({Component, pageProps}: AppProps) {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const [darkState, setDarkState] = useState(prefersDarkMode);
-
-  const handleThemeToggle = () => {
-    setDarkState(!darkState);
-  };
 
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
@@ -59,8 +54,7 @@ export default function MyApp({Component, pageProps}: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <DarkThemeSwitch checked={darkState} onChange={handleThemeToggle} />
-        <Component {...pageProps} />
+        <Component {...pageProps} darkState={darkState} setDarkState={setDarkState} />
       </ThemeProvider>
     </>
   );

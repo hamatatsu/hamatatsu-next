@@ -1,4 +1,4 @@
-import {Switch, SwitchProps} from '@material-ui/core';
+import {Switch} from '@material-ui/core';
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -10,15 +10,24 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function DarkThemeSwitch(props: SwitchProps) {
+export default function DarkThemeSwitch(props: DarkThemeSwitchProps) {
   const classes = useStyles();
+
+  const handleDarkState = () => {
+    props.setter(!(props.state));
+  };
 
   return (
     <Switch
       className={classes.root}
-      checked={props.checked}
-      onChange={props.onChange}
+      checked={props.state}
+      onChange={handleDarkState}
       name="darkThemeSwitch"
     />
   );
+}
+
+interface DarkThemeSwitchProps {
+  state: boolean,
+  setter: (state: boolean) => void,
 }
