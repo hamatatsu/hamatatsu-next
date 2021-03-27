@@ -1,6 +1,8 @@
+import React from 'react';
 import {Container, Grid} from '@material-ui/core';
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
 import Header from '../components/header';
+import DarkThemeSwitch from '../components/dark-theme-switch';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -14,11 +16,12 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function Home() {
+export default function Home(props: HomeProps) {
   const classes = useStyles();
 
   return (
     <Container className={classes.root} maxWidth="md">
+      <DarkThemeSwitch state={props.darkState} setter={props.setDarkState} />
       <Grid justify="center" container>
         <Grid item>
           <Header />
@@ -26,4 +29,9 @@ export default function Home() {
       </Grid>
     </Container>
   );
+}
+
+interface HomeProps {
+  darkState: boolean,
+  setDarkState: (state: boolean) => void,
 }

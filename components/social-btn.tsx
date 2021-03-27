@@ -22,12 +22,12 @@ export default function SocialButton() {
     <Grid className={classes.root} spacing={1} container>
       <Grid item>
         <Link className={classes.socialButton} href="https://twitter.com/hamatatsu0">
-          <Twitter />
+          <Twitter />Twitter
         </Link>
       </Grid>
       <Grid item>
         <Link className={classes.socialButton} href="https://github.com/hamatatsu">
-          <GitHub />
+          <GitHub />GitHub
         </Link>
       </Grid>
     </Grid>

@@ -1,24 +1,37 @@
-import {Switch, SwitchProps} from '@material-ui/core';
+import {IconButton} from '@material-ui/core';
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
+import {WbSunny, Brightness3} from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       position: 'fixed',
       right: 0,
+      '& > *': {
+        color: theme.palette.secondary.main,
+      },
     },
   }),
 );
 
-export default function DarkThemeSwitch(props: SwitchProps) {
+export default function DarkThemeSwitch(props: DarkThemeSwitchProps) {
   const classes = useStyles();
 
+  const handleDarkState = () => {
+    props.setter(!(props.state));
+  };
+
   return (
-    <Switch
+    <IconButton
       className={classes.root}
-      checked={props.checked}
-      onChange={props.onChange}
-      name="darkThemeSwitch"
-    />
+      onClick={handleDarkState}
+      aria-label="dark theme switch">
+      {props.state ? <WbSunny /> : <Brightness3 />}
+    </IconButton>
   );
+}
+
+interface DarkThemeSwitchProps {
+  state: boolean,
+  setter: (state: boolean) => void,
 }
