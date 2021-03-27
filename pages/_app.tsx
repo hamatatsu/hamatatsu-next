@@ -8,7 +8,7 @@ import {useEffect, useState, useMemo} from 'react';
 
 export default function MyApp({Component, pageProps}: AppProps) {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const [darkState, setDarkState] = useState(prefersDarkMode);
+  const [darkState, setDarkState] = useState(false);
 
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
@@ -16,6 +16,9 @@ export default function MyApp({Component, pageProps}: AppProps) {
       jssStyles.parentElement?.removeChild(jssStyles);
     }
   }, []);
+  useEffect(() => {
+    setDarkState(prefersDarkMode);
+  }, [prefersDarkMode]);
 
   const color1 = lightBlue[500];
   const color2 = orange[300];
