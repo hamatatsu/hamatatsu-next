@@ -1,6 +1,8 @@
 import { Avatar, Grid, Typography } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import Image from 'next/image';
 import SocialButton from '../components/social-btn';
+import profilePic from '../public/profile.png';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,7 +22,9 @@ export default function Header() {
   return (
     <Grid className={classes.root} direction="column" justify="center" alignItems="center" container>
       <Grid item>
-        <Avatar className={classes.avatar} alt="hamatatsu" src="/profile.png" />
+        <Avatar className={classes.avatar}>
+          <Image src={profilePic} alt="hamatatsu" layout='fill'/>
+        </Avatar>
       </Grid>
       <Grid item>
         <Typography variant="h2" gutterBottom>
