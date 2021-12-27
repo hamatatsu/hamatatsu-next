@@ -1,12 +1,12 @@
-import type {AppProps} from 'next/app';
+import { CssBaseline, useMediaQuery } from '@material-ui/core';
+import { lightBlue, orange } from '@material-ui/core/colors';
+import { jaJP } from '@material-ui/core/locale';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
-import {lightBlue, orange} from '@material-ui/core/colors';
-import {jaJP} from '@material-ui/core/locale';
-import {CssBaseline, useMediaQuery} from '@material-ui/core';
-import {useEffect, useState, useMemo} from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
-export default function MyApp({Component, pageProps}: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const [darkState, setDarkState] = useState(false);
 
@@ -23,25 +23,25 @@ export default function MyApp({Component, pageProps}: AppProps) {
   const color1 = lightBlue[500];
   const color2 = orange[300];
   const theme = useMemo(
-      () =>
-        createMuiTheme({
-          palette: {
-            primary: {
-              main: darkState ? color2 : color1,
-            },
-            secondary: {
-              main: darkState ? color1 : color2,
-            },
-            type: darkState ? 'dark' : 'light',
+    () =>
+      createTheme({
+        palette: {
+          primary: {
+            main: darkState ? color2 : color1,
           },
-          typography: {
-            fontFamily: [
-              'Noto Sans JP',
-              'sans-serif',
-            ].join(','),
+          secondary: {
+            main: darkState ? color1 : color2,
           },
-        }, jaJP),
-      [darkState],
+          type: darkState ? 'dark' : 'light',
+        },
+        typography: {
+          fontFamily: [
+            'Noto Sans JP',
+            'sans-serif',
+          ].join(','),
+        },
+      }, jaJP),
+    [darkState, color1, color2],
   );
 
   return (
@@ -55,8 +55,6 @@ export default function MyApp({Component, pageProps}: AppProps) {
         />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content={theme.palette.primary.main} />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

@@ -1,6 +1,6 @@
-import {IconButton} from '@material-ui/core';
-import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
-import {WbSunny, Brightness3} from '@material-ui/icons';
+import { IconButton } from '@material-ui/core';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { Brightness3, WbSunny } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

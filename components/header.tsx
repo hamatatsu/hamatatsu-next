@@ -1,5 +1,5 @@
-import {Grid, Typography, Avatar} from '@material-ui/core';
-import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
+import { Avatar, Grid, Typography } from '@material-ui/core';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import SocialButton from '../components/social-btn';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -24,7 +24,7 @@ export default function Header() {
       </Grid>
       <Grid item>
         <Typography variant="h2" gutterBottom>
-           Welcome to my page
+          Welcome to my page
         </Typography>
       </Grid>
       <Grid item>

@@ -1,7 +1,7 @@
-import {createMuiTheme} from '@material-ui/core/styles';
-import {jaJP} from '@material-ui/core/locale';
+import { jaJP } from '@material-ui/core/locale';
+import { createTheme } from '@material-ui/core/styles';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: '#4fc3f7',
