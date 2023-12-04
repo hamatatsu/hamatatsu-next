@@ -1,8 +1,13 @@
 import React from 'react';
-import DarkThemeSwitch from '@/app/components/dark-theme-switch';
+// import DarkThemeSwitch from '@/app/components/dark-theme-switch';
 import Header from '@/app/components/header';
 
-export default function Home(props: HomeProps) {
+// interface HomeProps {
+//   darkState: boolean,
+//   setDarkState: (state: boolean) => void,
+// }
+
+export default function Home() {
   return (
     <div className={"classes.root"}>
       {/* <DarkThemeSwitch state={props.darkState} setter={props.setDarkState} /> */}
@@ -13,9 +18,4 @@ export default function Home(props: HomeProps) {
       </div>
     </div>
   );
-}
-
-interface HomeProps {
-  darkState: boolean,
-  setDarkState: (state: boolean) => void,
 }
