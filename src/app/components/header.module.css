@@ -1,0 +1,22 @@
+.root {
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avator {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 72px;
+    margin-bottom: 21px;
+}
