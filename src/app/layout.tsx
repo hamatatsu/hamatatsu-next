@@ -4,8 +4,7 @@ import "./globals.css";
 
 const noto_sans_jp = Noto_Sans_JP({
   display: "swap",
-  weight: ["300", "400", "700"],
-  preload: false,
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
