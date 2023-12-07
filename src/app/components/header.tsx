@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import SocialButton from '@/app/components/social-btn';
-import styles from '@/app/components/header.module.css';
-import profile from '/public/profile.png';
+import Image from "next/image";
+import SocialButton from "@/app/components/social-btn";
+import styles from "@/app/components/header.module.css";
+import profile from "/public/profile.png";
 
 export default function Header() {
   return (
@@ -10,15 +10,11 @@ export default function Header() {
         <Image src={profile} alt="a profile image of hamatatsu" fill={true} />
       </div>
       <div>
-        <h1 className={styles.title}>
-          Welcome to my page
-        </h1>
+        <h1 className={styles.title}>Welcome to my page</h1>
       </div>
       <SocialButton />
       <div>
-        <p>
-          Undergoing construction😉
-        </p>
+        <p>Undergoing construction😉</p>
       </div>
     </div>
   );

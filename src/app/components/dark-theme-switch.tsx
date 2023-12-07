@@ -13,26 +13,27 @@
 //     },
 //   }),
 // );
-'use client';
+"use client";
 
 export default function DarkThemeSwitch(props: DarkThemeSwitchProps) {
   // const classes = useStyles();
 
   const handleDarkState = () => {
-    props.setter(!(props.state));
+    props.setter(!props.state);
   };
 
   return (
     <button
       className={"classes.root"}
       onClick={handleDarkState}
-      aria-label="dark theme switch">
+      aria-label="dark theme switch"
+    >
       {/* {props.state ? <WbSunny /> : <Brightness3 />} */}
     </button>
   );
 }
 
 interface DarkThemeSwitchProps {
-  state: boolean,
-  setter: (state: boolean) => void,
+  state: boolean;
+  setter: (state: boolean) => void;
 }
