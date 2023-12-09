@@ -1,6 +1,5 @@
-import React from "react";
 // import DarkThemeSwitch from '@/app/components/dark-theme-switch';
-import Header from "@/app/components/header";
+import Header from "@/app/_components/header";
 
 // interface HomeProps {
 //   darkState: boolean,

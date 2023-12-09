@@ -1,6 +1,6 @@
-import Image from "next/image";
-import SocialButton from "@/app/components/social-btn";
+import SocialButton from "@/app/_components/social-btn";
 import styles from "@/app/components/header.module.css";
+import Image from "next/image";
 import profile from "/public/profile.png";
 
 export default function Header() {

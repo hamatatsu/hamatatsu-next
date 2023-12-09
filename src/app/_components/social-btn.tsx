@@ -1,7 +1,7 @@
-import styles from "@/app/components/social-btn.module.css";
+import styles from "@/app/_components/social-btn.module.css";
+import Image from "next/image";
 import github from "/public/github.svg";
 import x from "/public/x.svg";
-import Image from "next/image";
 
 export default function SocialButton() {
   return (
