@@ -1,5 +1,5 @@
+import styles from "@/app/_components/header.module.css";
 import SocialButton from "@/app/_components/social-btn";
-import styles from "@/app/components/header.module.css";
 import Image from "next/image";
 import profile from "/public/profile.png";
 
