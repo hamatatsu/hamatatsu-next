@@ -1,3 +1,3 @@
-# [hamatatsu-next.vercel.app](http://hamatatsu-next.vercel.app/)
+# [hamatatsu.dev](http://hamatatsu.dev/)
 
 The source of hamatatsu's Next.js Pages
