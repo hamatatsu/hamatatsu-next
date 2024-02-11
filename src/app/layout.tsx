@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import { Suspense } from "react";
+import Loading from "./_components/loading";
 import "./globals.css";
 
 const noto_sans_jp = Noto_Sans_JP({
-  display: "swap",
   subsets: ["latin"],
 });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={noto_sans_jp.className}>{children}</body>
+      <Suspense fallback={<Loading />}>
+        <body className={noto_sans_jp.className}>{children}</body>
+      </Suspense>
     </html>
   );
 }
