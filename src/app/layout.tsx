@@ -5,7 +5,6 @@ import Loading from "./_components/loading";
 import "./globals.css";
 
 const noto_sans_jp = Noto_Sans_JP({
-  display: "optional",
   subsets: ["latin"],
 });
 
