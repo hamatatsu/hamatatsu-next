@@ -5,6 +5,7 @@ import Loading from "./_components/loading";
 import "./globals.css";
 
 const noto_sans_jp = Noto_Sans_JP({
+  display: "optional",
   subsets: ["latin"],
 });
 
@@ -20,9 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <Suspense fallback={<Loading />}>
-        <body className={noto_sans_jp.className}>{children}</body>
-      </Suspense>
+      <body className={noto_sans_jp.className}>
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+      </body>
     </html>
   );
 }
