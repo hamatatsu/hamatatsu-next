@@ -13,9 +13,6 @@ export default function Header() {
         <h1 className={styles.title}>Welcome to my page</h1>
       </div>
       <SocialButton />
-      <div>
-        <p>Undergoing construction😉</p>
-      </div>
     </div>
   );
 }
