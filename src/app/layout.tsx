@@ -1,7 +1,7 @@
+import Loading from "@/app/_components/loading";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { Suspense } from "react";
-import Loading from "./_components/loading";
 import "./globals.css";
 
 const noto_sans_jp = Noto_Sans_JP({
