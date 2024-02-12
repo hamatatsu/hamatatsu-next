@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  position: sticky;
+  top: 100vh;
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+}
+
+.copyright {
+  font-size: 14px;
+}

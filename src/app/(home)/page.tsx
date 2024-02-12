@@ -1,4 +1,5 @@
 // import DarkThemeSwitch from '@/app/components/dark-theme-switch';
+import Footer from "@/app/_components/footer";
 import Header from "@/app/_components/header";
 
 // interface HomeProps {
@@ -8,13 +9,11 @@ import Header from "@/app/_components/header";
 
 export default function Home() {
   return (
-    <div className={"classes.root"}>
+    <>
       {/* <DarkThemeSwitch state={props.darkState} setter={props.setDarkState} /> */}
-      <div>
-        <div>
-          <Header />
-        </div>
-      </div>
-    </div>
+      <Header />
+      {/* <p style={{ height: "1000px" }}></p> */}
+      <Footer />
+    </>
   );
 }
