@@ -1,4 +1,4 @@
-import styles from "@/app/_components/works.module.css";
+import styles from "@/app/_components/works.module.scss";
 
 export default async function Works() {
   const fetchWorks = await fetch(

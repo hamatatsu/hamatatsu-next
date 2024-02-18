@@ -1,4 +1,4 @@
-import styles from "@/app/_components/social-btn.module.css";
+import styles from "@/app/_components/social-btn.module.scss";
 import Image from "next/image";
 import github from "/public/github.svg";
 import x_twitter from "/public/x-twitter.svg";

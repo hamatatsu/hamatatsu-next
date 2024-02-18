@@ -1,4 +1,4 @@
-import styles from "@/app/_components/header.module.css";
+import styles from "@/app/_components/header.module.scss";
 import SocialButton from "@/app/_components/social-btn";
 import Image from "next/image";
 import profile from "/public/profile.png";

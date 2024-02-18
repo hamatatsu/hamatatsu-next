@@ -1,5 +1,5 @@
 // import DarkThemeSwitch from '@/app/components/dark-theme-switch';
-import styles from "@/app/(home)/home.module.css";
+import styles from "@/app/(home)/home.module.scss";
 import Footer from "@/app/_components/footer";
 import Header from "@/app/_components/header";
 
