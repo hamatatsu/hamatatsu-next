@@ -1,4 +1,5 @@
 import Loading from "@/app/_components/loading";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { Suspense } from "react";
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={noto_sans_jp.className}>
         <Suspense fallback={<Loading />}>{children}</Suspense>
+        <SpeedInsights />
       </body>
     </html>
   );
