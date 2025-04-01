@@ -1,13 +1,9 @@
-import Loading from "@/app/_components/loading";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
-import { Suspense } from "react";
 import "./globals.scss";
 
-const noto_sans_jp = Noto_Sans_JP({
-  subsets: ["latin"],
-});
+const noto_sans_jp = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "hamatatsu's page",
@@ -22,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={noto_sans_jp.className}>
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+        {children}
         <SpeedInsights />
       </body>
     </html>
